@@ -13,7 +13,7 @@ public class Imovel {
         this.endereco = endereco;
     }
     String apresentacao() {
-        return "Imóvel localizado no endereço " + endereco + ". Valor de R$ " + valor;
+        return "Imóvel localizado no endereço " + endereco.getLogradouro() + ". Valor de R$ " + valor;
     }
 
 }

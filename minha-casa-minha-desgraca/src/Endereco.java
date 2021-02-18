@@ -1,7 +1,7 @@
 public class Endereco {
     private final String logradouro;
     private final int numero;
-    private final int complemento;
+    private final String complemento;
     private final String bairro;
     private final String cidade;
     private final UnidadeFederativa estado;
@@ -14,7 +14,7 @@ public class Endereco {
         return numero;
     }
 
-    public int getComplemento() {
+    public String getComplemento() {
         return complemento;
     }
 
@@ -30,7 +30,7 @@ public class Endereco {
         return estado;
     }
 
-    public Endereco (String logradouro, int numero, int complemento, String bairro, String cidade, UnidadeFederativa estado) {
+    public Endereco (String logradouro, int numero, String complemento, String bairro, String cidade, UnidadeFederativa estado) {
         this.logradouro = logradouro;
         this.numero = numero;
         this.complemento = complemento;

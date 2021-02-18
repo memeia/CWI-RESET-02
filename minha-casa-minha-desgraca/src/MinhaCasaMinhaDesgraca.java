@@ -19,7 +19,20 @@ public class MinhaCasaMinhaDesgraca {
          *
          * NÃO MODIFICAR ESTA CLASSE ANTES DESTA LINHA.
          */
+        Endereco endereco1 = new Endereco( "Sapucaia",123, "201", "Centro", "Sapucaia", UnidadeFederativa.RS);
+        Endereco endereco2 = new Endereco( "Sapucaia",123, "201", "Centro", "Sapucaia", UnidadeFederativa.SP);
+        Endereco endereco3 = new Endereco( "Sapucaia",123, "201", "Centro", "Sapucaia", UnidadeFederativa.RJ);
+        Endereco endereco4 = new Endereco( "Sapucaia",123, "201", "Centro", "Sapucaia", UnidadeFederativa.SC);
+        Imovel imovel1 = new Imovel(50000, endereco1);
+        Imovel imovel2 = new Imovel(1000, endereco2);
+        Imovel imovel3 = new Imovel(2000000, endereco3);
+        Imovel imovel4 = new Imovel(200000, endereco4);
 
+
+        opcoesParaFinanciamento.registrarImovel(imovel1);
+        opcoesParaFinanciamento.registrarImovel(imovel2);
+        opcoesParaFinanciamento.registrarImovel(imovel3);
+        opcoesParaFinanciamento.registrarImovel(imovel4);
         /**
          * FIM
          *
