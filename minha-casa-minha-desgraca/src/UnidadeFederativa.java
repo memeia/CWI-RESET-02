@@ -1,3 +1,3 @@
 public enum UnidadeFederativa {
-    RS,SC,PR
+    RS,SC,PR,RJ,SP,ES,
 }
