@@ -17,6 +17,14 @@ public class ImoveisParaFinanciamento {
      *      " > Atenção, problema de registro! Imóveis com valor R$ XXX não são aceitos no programa."
      */
     public void registrarImovel(Imovel imovel) {
+        boolean imovelFoiAceito = imovel.getValor() >= 50000 && imovel.getValor() <= 1000000;
+
+        if( imovelFoiAceito) {
+            imoveis.add(imovel);
+        }
+        else {
+            System.out.println( " > Atenção, problema de registro! Imóveis com valor R$ " +imovel.getValor() + " não são aceitos no programa.");
+        }
 
         // se "imovel" corresponder às regras, adicioná-lo à lista "imoveis" com o seguinte código:
         //    imoveis.add(imovel);
@@ -32,8 +40,9 @@ public class ImoveisParaFinanciamento {
         // percorre a lista de imóveis
         for (Imovel imovel : imoveis) {
 
-            // se "imovel" corresponder às regras, adicioná-lo à lista de opcoes com o seguinte código:
-            //    opcoes.add(imovel);
+            if (valorLimite >= imovel.getValor()) {
+                opcoes.add(imovel);
+            }
         }
 
         return opcoes;
