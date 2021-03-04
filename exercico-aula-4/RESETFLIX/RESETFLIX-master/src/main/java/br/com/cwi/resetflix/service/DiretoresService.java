@@ -1,16 +1,11 @@
 package br.com.cwi.resetflix.service;
 
-import br.com.cwi.resetflix.entity.AtorEntity;
 import br.com.cwi.resetflix.entity.DiretorEntity;
 import br.com.cwi.resetflix.entity.FilmeEntity;
 import br.com.cwi.resetflix.mapper.*;
-import br.com.cwi.resetflix.repository.AtoresRepository;
 import br.com.cwi.resetflix.repository.DiretoresRepository;
-import br.com.cwi.resetflix.repository.FilmeRepository;
-import br.com.cwi.resetflix.request.CriarAtorRequest;
+import br.com.cwi.resetflix.repository.FilmesRepository;
 import br.com.cwi.resetflix.request.CriarDiretorRequest;
-import br.com.cwi.resetflix.response.AtoresResponse;
-import br.com.cwi.resetflix.response.ConsultarDetalhesAtorResponse;
 import br.com.cwi.resetflix.response.ConsultarDetalhesDiretorResponse;
 import br.com.cwi.resetflix.response.DiretoresResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +21,7 @@ public class DiretoresService {
     private DiretoresRepository diretoresRepository;
 
     @Autowired
-    private FilmeRepository filmeRepository;
+    private FilmesRepository filmeRepository;
 
     static DiretoresResponseMapper MAPPER_RESPONSE = new DiretoresResponseMapper();
     static DiretorEntityMapper MAPPER_ENTITY = new DiretorEntityMapper();

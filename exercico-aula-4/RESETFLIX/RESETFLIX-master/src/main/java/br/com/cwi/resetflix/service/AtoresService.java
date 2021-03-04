@@ -11,7 +11,7 @@ import br.com.cwi.resetflix.mapper.AtorEntityMapper;
 import br.com.cwi.resetflix.mapper.AtoresResponseMapper;
 import br.com.cwi.resetflix.mapper.ConsultarDetalhesAtorResponseMapper;
 import br.com.cwi.resetflix.repository.AtoresRepository;
-import br.com.cwi.resetflix.repository.FilmeRepository;
+import br.com.cwi.resetflix.repository.FilmesRepository;
 import br.com.cwi.resetflix.request.CriarAtorRequest;
 import br.com.cwi.resetflix.response.AtoresResponse;
 import br.com.cwi.resetflix.response.ConsultarDetalhesAtorResponse;
@@ -23,7 +23,7 @@ public class AtoresService {
     private AtoresRepository atoresRepository;
 
     @Autowired
-    private FilmeRepository filmeRepository;
+    private FilmesRepository filmeRepository;
 
     static AtoresResponseMapper MAPPER_RESPONSE = new AtoresResponseMapper();
     static AtorEntityMapper MAPPER_ENTITY = new AtorEntityMapper();

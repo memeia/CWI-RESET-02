@@ -12,7 +12,7 @@ import br.com.cwi.resetflix.domain.Genero;
 import br.com.cwi.resetflix.entity.FilmeEntity;
 
 @Repository
-public class FilmeRepository {
+public class FilmesRepository {
 
     static List<FilmeEntity> filmes = Collections.singletonList(
         new FilmeEntity(1l,"Interestelar", Genero.FICCAO_CIENTIFICA,
