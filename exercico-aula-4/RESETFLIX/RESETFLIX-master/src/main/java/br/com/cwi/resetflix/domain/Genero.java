@@ -1,5 +1,5 @@
 package br.com.cwi.resetflix.domain;
 
 public enum Genero {
-    PREENCHER, OS, GENEROS, FICCAO_CIENTIFICA
+   DRAMA, TERROR, COMEDIA, FICCAO_CIENTIFICA, ACAO, ROMANCE, EPICO, SUSPENSE
 }

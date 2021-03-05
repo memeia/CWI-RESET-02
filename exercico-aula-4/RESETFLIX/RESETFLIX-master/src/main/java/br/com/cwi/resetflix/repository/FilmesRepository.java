@@ -14,10 +14,9 @@ import br.com.cwi.resetflix.entity.FilmeEntity;
 @Repository
 public class FilmesRepository {
 
-    static List<FilmeEntity> filmes = Collections.singletonList(
-        new FilmeEntity(1l,"Interestelar", Genero.FICCAO_CIENTIFICA,
-            1l, asList(1l))
-    );
+    static List<FilmeEntity> filmes = new ArrayList<>();
+    static Long contadorIds = 1l;
+
 
     public List<FilmeEntity> getFilmes(){
         return filmes;
@@ -31,5 +30,15 @@ public class FilmesRepository {
     public List<FilmeEntity> acharFilmesDiretor(final Long id) {
         //TODO Filtrar na repository por id de diretor
         return filmes;
+    }
+
+    public Long criarFilme(FilmeEntity filmeSalvar) {
+        filmeSalvar.setId(contadorIds);
+        contadorIds++;
+
+        filmes.add(filmeSalvar);
+
+        return filmeSalvar.getId();
+
     }
 }
