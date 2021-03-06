@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import br.com.cwi.resetflix.entity.AtorEntity;
 import org.springframework.stereotype.Repository;
 
 import br.com.cwi.resetflix.domain.Genero;
@@ -20,6 +21,16 @@ public class FilmesRepository {
 
     public List<FilmeEntity> getFilmes(){
         return filmes;
+    }
+
+    public FilmeEntity acharFilmePorId(final Long id){
+        for(FilmeEntity filme : filmes){
+            if(filme.getId().equals(id)){
+                return filme;
+            }
+        }
+
+        return null;
     }
 
     public List<FilmeEntity> acharFilmesAtor(final Long id) {
